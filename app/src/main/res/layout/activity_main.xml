@@ -10,8 +10,7 @@
         android:id="@+id/icon_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="{fa-address-book}"
-        tools:ignore="HardcodedText"
-        android:textColor="#ffff33"/>
+        android:text="{fa_glass}"
+        tools:ignore="HardcodedText"/>
 
 </android.support.constraint.ConstraintLayout>

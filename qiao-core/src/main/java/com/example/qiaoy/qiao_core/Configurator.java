@@ -15,8 +15,8 @@ public class Configurator {
     private static final ArrayList<IconFontDescriptor> ICONS = new ArrayList<>();
 
     private Configurator(){
-        initIcons();
-        CONFIGS .put(ConfigType.CONFIG_READY.name(),false);
+
+        CONFIGS.put(ConfigType.CONFIG_READY.name(),false);
     }
 
     public static Configurator getInstance(){
@@ -30,10 +30,16 @@ public class Configurator {
         private static final  Configurator INSTANCE = new Configurator();
     }
 
+
+    public final void configure(){
+        initIcons();
+        CONFIGS.put(ConfigType.CONFIG_READY.name(), true);
+    }
+
     private void initIcons(){
         if(ICONS.size()>0){
             final Iconify.IconifyInitializer initializer = Iconify.with(ICONS.get(0));
-            for(int i=1; i<ICONS.size(); i++){
+            for(int i = 1; i<ICONS.size(); i++){
                 initializer.with(ICONS.get(i));
             }
         }
@@ -42,10 +48,6 @@ public class Configurator {
     public final Configurator withIcon(IconFontDescriptor descriptor){
         ICONS.add(descriptor);
         return this;
-    }
-
-    public final void configure(){
-        CONFIGS.put(ConfigType.CONFIG_READY.name(), true);
     }
 
     public final Configurator withApiHost(String host){
