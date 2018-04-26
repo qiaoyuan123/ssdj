@@ -10,10 +10,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/qiao-annotations" />
+            <option value="$PROJECT_DIR$/qiao-compiler" />
             <option value="$PROJECT_DIR$/qiao-core" />
             <option value="$PROJECT_DIR$/qiao-ec" />
-            <option value="$PROJECT_DIR$/ssdj-annotations" />
-            <option value="$PROJECT_DIR$/ssdj-compiler" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

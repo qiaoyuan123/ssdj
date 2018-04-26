@@ -27,8 +27,12 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation project(':qiao-core')
+    implementation project(path: ':qiao-core')
+    //字体图标
+    implementation 'com.joanzapata.iconify:android-iconify-ionicons:2.2.2'
+    implementation 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.2'
 }

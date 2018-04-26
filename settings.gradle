@@ -1,1 +1,1 @@
-include ':app', ':ssdj-annotations', ':ssdj-compiler', ':qiao-core', ':qiao-ec'
+include ':app', ':qiao-annotations', ':qiao-compiler', ':qiao-core', ':qiao-ec'
