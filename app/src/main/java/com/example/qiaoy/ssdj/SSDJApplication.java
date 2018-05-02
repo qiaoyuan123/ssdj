@@ -3,7 +3,7 @@ package com.example.qiaoy.ssdj;
 import android.app.Application;
 
 import com.example.qiaoy.qiao.ec.icon.FontEcModule;
-import com.example.qiaoy.qiao_core.Core;
+import com.example.qiaoy.qiao_core.app.Core;
 import com.joanzapata.iconify.fonts.FontAwesomeModule;
 
 public class SSDJApplication extends Application {

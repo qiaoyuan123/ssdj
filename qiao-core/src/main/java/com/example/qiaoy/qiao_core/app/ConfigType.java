@@ -1,4 +1,4 @@
-package com.example.qiaoy.qiao_core;
+package com.example.qiaoy.qiao_core.app;
 
 public enum ConfigType {
     API_HOST,

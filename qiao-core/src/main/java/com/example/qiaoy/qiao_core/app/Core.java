@@ -1,4 +1,4 @@
-package com.example.qiaoy.qiao_core;
+package com.example.qiaoy.qiao_core.app;
 
 import android.content.Context;
 
@@ -11,7 +11,7 @@ public final class Core {
         return Configurator.getInstance();
     }
 
-    private static HashMap<String ,Object> getConfigs(){
+    public static HashMap<String ,Object> getConfigs(){
         return Configurator.getInstance().getConfigs();
     }
 
