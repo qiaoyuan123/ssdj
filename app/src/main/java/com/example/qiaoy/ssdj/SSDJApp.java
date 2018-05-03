@@ -6,7 +6,7 @@ import com.example.qiaoy.qiao.ec.icon.FontEcModule;
 import com.example.qiaoy.qiao_core.app.Core;
 import com.joanzapata.iconify.fonts.FontAwesomeModule;
 
-public class SSDJApplication extends Application {
+public class SSDJApp extends Application {
 
     @Override
     public void onCreate() {
