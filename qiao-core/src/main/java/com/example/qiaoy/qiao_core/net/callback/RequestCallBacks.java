@@ -1,12 +1,11 @@
 package com.example.qiaoy.qiao_core.net.callback;
 
 import android.os.Handler;
-import android.telecom.Call;
 
 import com.example.qiaoy.qiao_core.app.Core;
 import com.example.qiaoy.qiao_core.net.RestCreator;
-import com.example.qiaoy.qiao_core.ui.CoreLoader;
-import com.example.qiaoy.qiao_core.ui.LoaderStyle;
+import com.example.qiaoy.qiao_core.ui.loader.CoreLoader;
+import com.example.qiaoy.qiao_core.ui.loader.LoaderStyle;
 
 
 import retrofit2.Callback;

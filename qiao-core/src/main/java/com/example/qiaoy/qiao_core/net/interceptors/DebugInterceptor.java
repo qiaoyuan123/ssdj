@@ -3,7 +3,7 @@ package com.example.qiaoy.qiao_core.net.interceptors;
 import android.support.annotation.NonNull;
 import android.support.annotation.RawRes;
 
-import com.example.qiaoy.qiao_core.uril.FileUtil;
+import com.example.qiaoy.qiao_core.uril.file.FileUtil;
 
 import java.io.IOException;
 

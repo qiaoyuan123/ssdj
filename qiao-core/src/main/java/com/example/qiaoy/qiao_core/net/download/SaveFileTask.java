@@ -7,7 +7,7 @@ import android.os.AsyncTask;
 import com.example.qiaoy.qiao_core.app.Core;
 import com.example.qiaoy.qiao_core.net.callback.IRequest;
 import com.example.qiaoy.qiao_core.net.callback.ISuccess;
-import com.example.qiaoy.qiao_core.uril.FileUtil;
+import com.example.qiaoy.qiao_core.uril.file.FileUtil;
 
 import java.io.File;
 import java.io.InputStream;

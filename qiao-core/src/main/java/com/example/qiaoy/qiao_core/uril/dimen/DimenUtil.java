@@ -1,4 +1,4 @@
-package com.example.qiaoy.qiao_core.uril;
+package com.example.qiaoy.qiao_core.uril.dimen;
 
 import android.content.res.Resources;
 import android.util.DisplayMetrics;

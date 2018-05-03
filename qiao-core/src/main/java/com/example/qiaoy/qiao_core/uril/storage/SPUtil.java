@@ -1,4 +1,4 @@
-package com.example.qiaoy.qiao_core.uril;
+package com.example.qiaoy.qiao_core.uril.storage;
 
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;

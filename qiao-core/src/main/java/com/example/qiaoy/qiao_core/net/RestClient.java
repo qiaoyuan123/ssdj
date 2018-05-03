@@ -7,11 +7,10 @@ import com.example.qiaoy.qiao_core.net.callback.IFailure;
 import com.example.qiaoy.qiao_core.net.callback.IRequest;
 import com.example.qiaoy.qiao_core.net.callback.ISuccess;
 import com.example.qiaoy.qiao_core.net.callback.RequestCallBacks;
-import com.example.qiaoy.qiao_core.ui.CoreLoader;
-import com.example.qiaoy.qiao_core.ui.LoaderStyle;
+import com.example.qiaoy.qiao_core.ui.loader.CoreLoader;
+import com.example.qiaoy.qiao_core.ui.loader.LoaderStyle;
 
 import java.io.File;
-import java.util.Map;
 import java.util.WeakHashMap;
 
 import okhttp3.MediaType;

@@ -7,15 +7,13 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.ContentFrameLayout;
 
 import com.example.qiaoy.qiao_core.R;
-import com.example.qiaoy.qiao_core.delegates.QiaoDelegate;
-
-import java.util.zip.InflaterInputStream;
+import com.example.qiaoy.qiao_core.delegates.CoreDelegate;
 
 import me.yokeyword.fragmentation.SupportActivity;
 
 public abstract class ProxyActivity extends SupportActivity {
 
-    public abstract QiaoDelegate setRootDelegare();
+    public abstract CoreDelegate setRootDelegare();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

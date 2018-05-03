@@ -1,4 +1,4 @@
-package com.example.qiaoy.qiao_core.uril;
+package com.example.qiaoy.qiao_core.uril.file;
 
 import android.content.ContentResolver;
 import android.content.Context;

@@ -1,4 +1,4 @@
-package com.example.qiaoy.qiao_core.ui;
+package com.example.qiaoy.qiao_core.ui.loader;
 
 import android.content.Context;
 
