@@ -8,23 +8,26 @@ import com.joanzapata.iconify.Iconify;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import okhttp3.Interceptor;
+
 public class Configurator {
 
-    private static final HashMap<String, Object> CONFIGS = new HashMap<>();
+    private static final HashMap<Object, Object> APP_CONFIGS = new HashMap<>();
     private static final ArrayList<IconFontDescriptor> ICONS = new ArrayList<>();
+    private static final ArrayList<Interceptor> INTERCEPTORS = new ArrayList<>();
     private static final Handler HANDLER = new Handler();
 
     private Configurator() {
-        CONFIGS.put(ConfigType.CONFIG_READY.name(), false);
-        CONFIGS.put(ConfigType.HANDLER.name(), HANDLER);
+        APP_CONFIGS.put(ConfigKeys.CONFIG_READY, false);
+        APP_CONFIGS.put(ConfigKeys.HANDLER, HANDLER);
     }
 
     public static Configurator getInstance() {
         return Holder.INSTANCE;
     }
 
-    final HashMap<String, Object> getConfigs() {
-        return CONFIGS;
+    final HashMap<Object, Object> getAppConfigs() {
+        return APP_CONFIGS;
     }
 
 
@@ -32,10 +35,21 @@ public class Configurator {
         private static final Configurator INSTANCE = new Configurator();
     }
 
+    public final Configurator withInterceptor(Interceptor interceptor) {
+        INTERCEPTORS.add(interceptor);
+        APP_CONFIGS.put(ConfigKeys.INTERCEPTOR, INTERCEPTORS);
+        return this;
+    }
+
+    public final Configurator withInterceptors(ArrayList<Interceptor> interceptors) {
+        INTERCEPTORS.addAll(interceptors);
+        APP_CONFIGS.put(ConfigKeys.INTERCEPTOR, INTERCEPTORS);
+        return this;
+    }
 
     public final void configure() {
         initIcons();
-        CONFIGS.put(ConfigType.CONFIG_READY.name(), true);
+        APP_CONFIGS.put(ConfigKeys.CONFIG_READY, true);
     }
 
     private void initIcons() {
@@ -53,20 +67,20 @@ public class Configurator {
     }
 
     public final Configurator withApiHost(String host) {
-        CONFIGS.put(ConfigType.API_HOST.name(), host);
+        APP_CONFIGS.put(ConfigKeys.API_HOST, host);
         return this;
     }
 
     private void checkCOnfiguration() {
-        final boolean isReady = (boolean) CONFIGS.get(ConfigType.CONFIG_READY.name());
-        if (isReady) {
+        final boolean isReady = (boolean) APP_CONFIGS.get(ConfigKeys.CONFIG_READY);
+        if (!isReady) {
             throw new RuntimeException("Configuration is not read, call configure");
         }
     }
 
     @SuppressWarnings("unchecked")
-    final <T> T getConfiguration(Enum<ConfigType> key) {
+    final <T> T getConfiguration(Object key) {
         checkCOnfiguration();
-        return (T) CONFIGS.get(key.name());
+        return (T) APP_CONFIGS.get(key);
     }
 }

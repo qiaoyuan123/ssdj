@@ -2,7 +2,9 @@ package com.example.qiaoy.ssdj;
 
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.qiaoy.qiao_core.delegates.QiaoDelegate;
 import com.example.qiaoy.qiao_core.net.RestClient;
@@ -23,19 +25,22 @@ public class SSDJDelegate extends QiaoDelegate{
 
     private void teatRestCliet() {
         RestClient.builder()
-                .url("https://www.baidu.com/")
+                .url("http://127.0.0.1/index")
 //                .params("", "")
                 .loader(getContext())
                 .success(new ISuccess() {
                     @Override
                     public void onSuccess(String response) {
+                        Log.e("?",response);
+                        Toast.makeText(getContext(),response, Toast.LENGTH_LONG).show();
                     }
-                }).failure(new IFailure() {
-            @Override
-            public void onFailure() {
+                })
+                .failure(new IFailure() {
+                    @Override
+                    public void onFailure() {
 
-            }
-        }).build()
+                    }
+                }).build()
                 .get();
 
     }
