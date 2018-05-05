@@ -20,28 +20,6 @@ public class SSDJDelegate extends CoreDelegate {
 
     @Override
     protected void onBindView(Bundle savedInstanceState, View rootView) {
-        teatRestCliet();
-    }
-
-    private void teatRestCliet() {
-        RestClient.builder()
-                .url("http://127.0.0.1/index")
-//                .params("", "")
-                .loader(getContext())
-                .success(new ISuccess() {
-                    @Override
-                    public void onSuccess(String response) {
-                        Log.e("?",response);
-                        Toast.makeText(getContext(),response, Toast.LENGTH_LONG).show();
-                    }
-                })
-                .failure(new IFailure() {
-                    @Override
-                    public void onFailure() {
-
-                    }
-                }).build()
-                .get();
 
     }
 
